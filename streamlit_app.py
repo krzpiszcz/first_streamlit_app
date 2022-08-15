@@ -44,15 +44,17 @@ streamlit.text("Hello from Snowflake:")
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_cur.execute("select * from fruit_load_list")
 
+## fetch one row into text line
 # my_data_row = my_cur.fetchone() ## fetch one row
 # streamlit.text("The fruit load list contains:")
 # streamlit.text(my_data_row)
 
+## fetch one row into table
 # my_data_row = my_cur.fetchone() ## fetch one row
 # streamlit.header("The fruit load list contains:")
 # streamlit.dataframe(my_data_row)
 
-
+## fetch all rows into table
 my_data_row = my_cur.fetchall() ## fetch all rows
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
